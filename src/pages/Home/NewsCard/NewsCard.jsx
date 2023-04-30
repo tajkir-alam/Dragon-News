@@ -39,7 +39,8 @@ const NewsCard = ({ news }) => {
                                 }
                                 ... <Link to={`/news/${_id}`} className='text-warning text-decoration-none'>Read More</Link>
 
-                                <hr className='my-4' />
+                                {/* <hr className='my-4' /> */}
+                                <div className='border border-top-1 my-4'></div>
 
                                 <div className='d-flex justify-content-between align-items-center mb-2'>
                                     <div className='d-flex gap-2 align-items-center'>
@@ -49,11 +50,11 @@ const NewsCard = ({ news }) => {
                                             placeholderSymbol={<FaStar className='text-warning'></FaStar>}
                                             readonly
                                         />
-                                        <p className='m-0'>{rating.number}</p>
+                                        <div className='m-0'>{rating.number}</div>
                                     </div>
                                     <div className='d-flex gap-2 align-items-center'>
                                         <FaEye className='fs-5'></FaEye>
-                                        <p className='m-0'>{total_view}</p>
+                                        <div className='m-0'>{total_view}</div>
                                     </div>
                                 </div>
                             </Card.Text>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter } from 'react-icons/fa';
 
@@ -6,13 +6,27 @@ import qZoneImg1 from '../../../assets/qZone1.png';
 import qZoneImg2 from '../../../assets/qZone2.png';
 import qZoneImg3 from '../../../assets/qZone3.png';
 import bg from '../../../assets/bg.png';
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const RightNav = () => {
+    const { signupWithEmailGoogle } = useContext(AuthContext);
+
+    const googleSignin = () => {
+        signupWithEmailGoogle()
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
+    }
+
     return (
         <div>
             <section>
                 <h5>Login With</h5>
-                <Button className='w-100 d-flex justify-content-center align-items-center gap-2 border border-1 border-primary mt-4' variant='' >
+                <Button onClick={googleSignin} className='w-100 d-flex justify-content-center align-items-center gap-2 border border-1 border-primary mt-4' variant='' >
                     <FaGoogle></FaGoogle>
                     Login With Google
                 </Button>
@@ -46,7 +60,7 @@ const RightNav = () => {
             </section>
 
             <section className='position-relative'>
-                <img src={bg} alt="" className='w-100'/>
+                <img src={bg} alt="" className='w-100' />
                 <div className='text-center text-light position-absolute top-0 px-4 pt-4 mt-5'>
                     <h1>Create an Amazing Newspaper</h1>
                     <p className='my-4'>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>

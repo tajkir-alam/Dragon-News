@@ -18,7 +18,7 @@ const Header = () => {
                 </h5>
             </section>
 
-            <section className='bg-light p-3 d-flex align-items-center gap-4'>
+            <section className='bg-light p-3 d-flex align-items-center gap-4 my-4'>
                 <Link to={'/'}><Button variant='danger' className='rounded-0 px-3 py-2'>Latest</Button></Link>
                 <Marquee pauseOnHover speed={100} className='fw-semibold'>Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...</Marquee>
             </section>

@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home/Home";
 import Category from "../pages/Home/Category/Category";
 import NewsLayout from "../layout/NewsLayout";
 import News from "../pages/News/News";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ':id',
-                element: <News></News>,
+                element: <PrivateRoute><News></News></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://dragon-news-data-server-tajkir-alam.vercel.app/news/${params.id}`)
             }
         ]

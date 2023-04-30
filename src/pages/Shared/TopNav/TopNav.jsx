@@ -10,8 +10,6 @@ const TopNav = () => {
 
     const handleLogout = () => {
         logout()
-        .then(result => {})
-        .cath(error => console.log(error.message))
     }
 
     return (
@@ -27,16 +25,16 @@ const TopNav = () => {
                         </Nav>
                         <Nav className='d-flex align-items-center gap-2'>
                             <FaRegUserCircle className='fs-2'></FaRegUserCircle>
-                            <Nav.Link>
-                                {!user ?
-                                    <Link to={'/login'}><Button variant='dark' className='rounded-0 px-5'>Login</Button></Link> :
-                                    <Button variant='dark' onClick={handleLogout} className='rounded-0 px-5'>Logout</Button>
-                                }
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+
+                            {!user ?
+                                <Link to={'/login'}><Button variant='dark' className='rounded-0 px-5'>Login</Button></Link> :
+                                <Button variant='dark' onClick={handleLogout} className='rounded-0 px-5'>Logout</Button>
+                            }
+
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </div >
     );
 };

@@ -4,7 +4,6 @@ import NewsCard from '../NewsCard/NewsCard';
 
 const Home = () => {
     const allNews = useLoaderData();
-    console.log(allNews);
     
     return (
         <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { FaRegUserCircle } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const TopNav = () => {
     return (
@@ -10,9 +11,9 @@ const TopNav = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto gap-4">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="#features">About</Nav.Link>
-                            <Nav.Link href="#pricing">Career</Nav.Link>
+                            <Link to={'/'} className=' nav-link'>Home</Link>
+                            <Link to={'#'} className=' nav-link'>About</Link>
+                            <Link to={'#'} className=' nav-link'>Career</Link>
                         </Nav>
                         <Nav className='d-flex align-items-center gap-2'>
                             <FaRegUserCircle className='fs-2'></FaRegUserCircle>

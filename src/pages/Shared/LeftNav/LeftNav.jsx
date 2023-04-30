@@ -8,13 +8,14 @@ import img3 from '../../../assets/3.png';
 
 const LeftNav = () => {
     const [loadCategory, setLoadCategory] = useState([]);
-    console.log(loadCategory);
+    
     useEffect(() => {
         fetch('https://dragon-news-data-server-tajkir-alam.vercel.app/categories')
             .then(res => res.json())
             .then(data => setLoadCategory(data))
             .catch(error => console.log(error.message))
     }, [])
+    
     return (
         <div>
             <section>
@@ -27,30 +28,30 @@ const LeftNav = () => {
             </section>
 
             <section className='my-5'>
-                <Card style={{ width: '18rem' }} className='border-0'>
+                <Card className='border-0'>
                     <Card.Img variant="top" src={img1} />
                     <Card.Body className='p-0'>
                         <Card.Title className='my-4'>Bayern Slams Authorities Over Flight Delay to Club World Cup</Card.Title>
                         <Card.Text>
-                            <h6>Sports</h6>
+                            <>Sports</>
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '18rem' }} className='border-0 my-4'>
+                <Card className='border-0 my-4'>
                     <Card.Img variant="top" src={img2} />
                     <Card.Body className='p-0'>
                         <Card.Title className='my-4'>Bayern Slams Authorities Over Flight Delay to Club World Cup</Card.Title>
                         <Card.Text>
-                            <h6>Sports</h6>
+                            <>Sports</>
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '18rem' }} className='border-0'>
+                <Card className='border-0'>
                     <Card.Img variant="top" src={img3} />
                     <Card.Body className='p-0'>
                         <Card.Title className='my-4'>Bayern Slams Authorities Over Flight Delay to Club World Cup</Card.Title>
                         <Card.Text>
-                            <h6>Sports</h6>
+                            <>Sports</>
                         </Card.Text>
                     </Card.Body>
                 </Card>

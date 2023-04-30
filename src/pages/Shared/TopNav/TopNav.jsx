@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import {FaRegUserCircle} from 'react-icons/fa'
+import { FaRegUserCircle } from 'react-icons/fa'
 
 const TopNav = () => {
     return (
@@ -14,11 +14,11 @@ const TopNav = () => {
                             <Nav.Link href="#features">About</Nav.Link>
                             <Nav.Link href="#pricing">Career</Nav.Link>
                         </Nav>
-                        <Nav>
+                        <Nav className='d-flex align-items-center gap-2'>
+                            <FaRegUserCircle className='fs-2'></FaRegUserCircle>
                             <Nav.Link href="#deets">
-                                <FaRegUserCircle className='fs-1'></FaRegUserCircle>
+                                <Button variant='dark' className='rounded-0 px-5'>Login</Button>
                             </Nav.Link>
-                            <Button variant='dark' className='rounded-0 px-4 '>Login</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

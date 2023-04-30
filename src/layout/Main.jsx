@@ -11,16 +11,16 @@ const Main = () => {
             <Header></Header>
             <TopNav></TopNav>
 
-            <Row md={3} className='mt-4'>
-                <Col>
+            <Row className='mt-4'>
+                <Col md={3}>
                 <LeftNav></LeftNav>
                 </Col>
                 
-                <Col>
+                <Col md={6}>
                     <h4>Coming..........</h4>
                 </Col>
                 
-                <Col>
+                <Col md={3}>
                     <RightNav></RightNav>
                 </Col>
             </Row>

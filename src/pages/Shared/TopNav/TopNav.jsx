@@ -24,11 +24,13 @@ const TopNav = () => {
                             <Link to={'#'} className=' nav-link'>Career</Link>
                         </Nav>
                         <Nav className='d-flex align-items-center gap-2'>
-                            <FaRegUserCircle className='fs-2'></FaRegUserCircle>
 
                             {!user ?
                                 <Link to={'/login'}><Button variant='dark' className='rounded-0 px-5'>Login</Button></Link> :
+                                <>
+                                <FaRegUserCircle className='fs-2'></FaRegUserCircle>
                                 <Button variant='dark' onClick={handleLogout} className='rounded-0 px-5'>Logout</Button>
+                                </>
                             }
 
                         </Nav>
